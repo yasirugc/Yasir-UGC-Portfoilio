@@ -2,240 +2,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yasir UGC Creator Portfolio">
-  <title>Yasir | UGC Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yasir | UGC Portfolio</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      margin: 0;
-      background: #ffffff;
-      color: #171717;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    a {
-      color: inherit;
-    }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    .container {
-      max-width: 1150px;
-      margin: 0 auto;
-      padding: 40px 24px 70px;
-    }
+.wrap {
+  max-width: 1160px;
+  margin: auto;
+  padding: 0 24px;
+}
 
-    header {
-      text-align: center;
-      padding: 40px 0 50px;
-      border-bottom: 1px solid #e8e8e8;
-    }
+/* NAVIGATION */
 
-    h1 {
-      font-size: clamp(60px, 10vw, 100px);
-      font-weight: 700;
-      letter-spacing: -5px;
-      margin: 0;
-    }
+header {
+  border-bottom: 1px solid #e8e8e8;
+}
 
-    .subtitle {
-      font-size: 14px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #777777;
-      margin-top: 12px;
-    }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
 
-    section {
-      padding-top: 55px;
-    }
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
 
-    h2 {
-      font-size: 28px;
-      letter-spacing: -1px;
-      margin: 0 0 25px;
-    }
+.navlinks {
+  display: flex;
+  gap: 25px;
+  font-size: 13px;
+  font-weight: 600;
+}
 
-    .videos {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
+/* SECTIONS */
 
-    .video-card {
-      min-width: 0;
-    }
+.section {
+  padding: 75px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
 
-    .video-card video {
-      display: block;
-      width: 100%;
-      aspect-ratio: 9 / 16;
-      object-fit: cover;
-      background: #eeeeee;
-      border-radius: 12px;
-    }
+.eyebrow {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #666666;
+}
 
-    .video-title {
-      font-size: 14px;
-      font-weight: 600;
-      margin: 13px 0 0;
-      line-height: 1.4;
-    }
+h1 {
+  font-size: clamp(48px, 6vw, 78px);
+  letter-spacing: -4px;
+  margin: 18px 0;
+}
 
-    .contact {
-      margin-top: 60px;
-      padding: 35px 0;
-      border-top: 1px solid #e8e8e8;
-    }
+h2 {
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: -2px;
+  margin: 12px 0 20px;
+}
 
-    .contact p {
-      font-size: 16px;
-      line-height: 1.8;
-      margin: 10px 0;
-      overflow-wrap: anywhere;
-    }
+.muted {
+  color: #555555;
+  font-size: 17px;
+  line-height: 1.8;
+}
 
-    .contact a {
-      color: #171717;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
+/* ABOUT SECTION */
 
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      color: #999999;
-      font-size: 12px;
-    }
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
 
-    @media (max-width: 800px) {
-      .videos {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
 
-    @media (max-width: 480px) {
-      .container {
-        padding: 20px 18px 45px;
-      }
+.chip {
+  padding: 11px 15px;
+  border: 1px solid #cccccc;
+  border-radius: 30px;
+  font-size: 13px;
+  color: #333333;
+}
 
-      header {
-        padding: 30px 0 40px;
-      }
+/* VIDEOS */
 
-      h1 {
-        letter-spacing: -3px;
-      }
+.videos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 35px;
+}
 
-      .videos {
-        gap: 12px;
-      }
+.video-card {
+  background: #f7f7f7;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  overflow: hidden;
+  min-width: 0;
+}
 
-      .video-title {
-        font-size: 12px;
-      }
-    }
-  </style>
+.video-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: #eeeeee;
+}
+
+.video-info {
+  padding: 18px;
+}
+
+.video-info h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.video-info p {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* CONTACT */
+
+.contact {
+  background: #f4f4f4;
+  color: #171717;
+  padding: 60px 40px;
+  border-radius: 20px;
+}
+
+.contact p {
+  font-size: 17px;
+  color: #444444;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.contact a {
+  color: #171717;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 24px;
+  background: #171717;
+  color: #ffffff !important;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 35px 0;
+  color: #777777;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* MOBILE */
+
+@media(max-width:900px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .videos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media(max-width:520px) {
+  .section {
+    padding: 55px 0;
+  }
+
+  .videos {
+    gap: 12px;
+  }
+
+  .video-info {
+    padding: 12px;
+  }
+
+  .video-info h3 {
+    font-size: 14px;
+  }
+
+  .video-info p {
+    font-size: 12px;
+  }
+
+  .contact {
+    padding: 35px 22px;
+  }
+
+  .navlinks {
+    gap: 12px;
+    font-size: 11px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#top">YASIR.</a>
 
-    <header>
-      <h1>Yasir</h1>
-      <div class="subtitle">UGC Creator</div>
-    </header>
+      <div class="navlinks">
+        <a href="#about">ABOUT</a>
+        <a href="#work">WORK</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </nav>
+  </div>
+</header>
 
-    <main>
+<main id="top">
+<div class="wrap">
 
-      <section id="work">
-        <h2>My Work</h2>
+<!-- ABOUT SECTION FIRST -->
 
-        <div class="videos">
+<section id="about" class="section about">
 
-          <!-- VIDEO 1 -->
-          <div class="video-card">
-            <video controls playsinline preload="metadata">
-              <source src="video1.mp4" type="video/mp4">
-              Your browser does not support video playback.
-            </video>
-            <p class="video-title">
-              Lifestyle Content
-            </p>
-          </div>
+  <div>
+    <div class="eyebrow">Meet the Creator</div>
+    <h1>Hey, I'm Yasir.</h1>
+  </div>
 
-          <!-- VIDEO 2 -->
-          <div class="video-card">
-            <video controls playsinline preload="metadata">
-              <source src="video2.mp4" type="video/mp4">
-              Your browser does not support video playback.
-            </video>
-            <p class="video-title">
-              Fashion & Styling
-            </p>
-          </div>
+  <div>
+    <p class="muted">
+      I'm a short-form content creator sharing
+      product-focused and lifestyle videos.
+      My approach is simple: relatable ideas,
+      natural visuals and content that feels
+      like it belongs in your feed.
+    </p>
 
-          <!-- VIDEO 3 -->
-          <div class="video-card">
-            <video controls playsinline preload="metadata">
-              <source src="video3.mp4" type="video/mp4">
-              Your browser does not support video playback.
-            </video>
-            <p class="video-title">
-              Fitness & Product Showcase
-            </p>
-          </div>
+    <div class="chips">
+      <span class="chip">Product Showcases</span>
+      <span class="chip">Fashion & Styling</span>
+      <span class="chip">Fitness</span>
+      <span class="chip">Lifestyle</span>
+      <span class="chip">Short-form Video</span>
+    </div>
+  </div>
 
-          <!-- VIDEO 4 -->
-          <div class="video-card">
-            <video controls playsinline preload="metadata">
-              <source src="video4.mp4" type="video/mp4">
-              Your browser does not support video playback.
-            </video>
-            <p class="video-title">
-              Home & Lifestyle
-            </p>
-          </div>
+</section>
 
-        </div>
-      </section>
+<!-- FEATURED VIDEOS -->
 
-      <section class="contact" id="contact">
-        <h2>Contact</h2>
+<section id="work" class="section">
 
-        <p>
-          <strong>TikTok:</strong>
-          <a href="https://www.tiktok.com/@yasirbonded"
-             target="_blank"
-             rel="noopener noreferrer">
-            @YasirBonded
-          </a>
-        </p>
+  <div class="eyebrow">Selected Projects</div>
 
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:Yasiryusufa2020@gmail.com">
-            Yasiryusufa2020@gmail.com
-          </a>
-        </p>
-      </section>
+  <h2>Featured Videos</h2>
 
-    </main>
+  <p class="muted">
+    Four examples of my short-form storytelling.
+    Tap play to watch.
+  </p>
 
-    <footer>
-      © 2026 Yasir | UGC Creator
-    </footer>
+  <div class="videos">
+
+    <!-- VIDEO 1 -->
+    <article class="video-card">
+
+      <video controls playsinline preload="metadata">
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+
+      <div class="video-info">
+        <h3>Lifestyle Visual Storytelling</h3>
+        <p>Outdoor lifestyle · Visual storytelling</p>
+      </div>
+
+    </article>
+
+    <!-- VIDEO 2 -->
+    <article class="video-card">
+
+      <video controls playsinline preload="metadata">
+        <source src="video2.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+
+      <div class="video-info">
+        <h3>3 Ways to Style an Arc'teryx Toque</h3>
+        <p>Fashion · Styling tutorial</p>
+      </div>
+
+    </article>
+
+    <!-- VIDEO 3 -->
+    <article class="video-card">
+
+      <video controls playsinline preload="metadata">
+        <source src="video3.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+
+      <div class="video-info">
+        <h3>Elevate Your Home Gym</h3>
+        <p>Fitness · Product showcase</p>
+      </div>
+
+    </article>
+
+    <!-- VIDEO 4 -->
+    <article class="video-card">
+
+      <video controls playsinline preload="metadata">
+        <source src="video4.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+
+      <div class="video-info">
+        <h3>Home Appliance Showcase</h3>
+        <p>Home essentials · Product-focused content</p>
+      </div>
+
+    </article>
 
   </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="section">
+
+  <div class="contact">
+
+    <div class="eyebrow">Let's Collaborate</div>
+
+    <h2>
+      Let's make something<br>
+      worth watching.
+    </h2>
+
+    <p>
+      Interested in working together?
+      Reach out to discuss content opportunities.
+    </p>
+
+    <p>
+      <strong>TikTok:</strong>
+      <a href="https://www.tiktok.com/@yasirbonded"
+         target="_blank"
+         rel="noopener noreferrer">
+        @YasirBonded
+      </a>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:Yasiryusufa2020@gmail.com">
+        Yasiryusufa2020@gmail.com
+      </a>
+    </p>
+
+    <a class="btn"
+       href="mailto:Yasiryusufa2020@gmail.com">
+      Contact Me ↗
+    </a>
+
+  </div>
+
+</section>
+
+</div>
+</main>
+
+<div class="wrap">
+  <footer>
+    <span>© 2026 Yasir. UGC Creator.</span>
+    <span>@yasirbonded</span>
+  </footer>
+</div>
 
 </body>
 </html>
